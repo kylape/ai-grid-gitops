@@ -2,11 +2,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: grid-hub-namespaces
-  namespace: openshift-gitops
+  namespace: grid-gitops
   annotations:
     argocd.argoproj.io/sync-wave: "0"
 spec:
-  project: default
+  project: grid-workloads
   source:
     repoURL: REPLACE_GITOPS_REPO_URL
     targetRevision: main
