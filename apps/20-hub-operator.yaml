@@ -2,11 +2,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: grid-hub-operator
-  namespace: openshift-gitops
+  namespace: grid-gitops
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
-  project: default
+  project: grid-workloads
   sources:
     - repoURL: ghcr.io/praxis-proxy/charts
       chart: grid-operator
